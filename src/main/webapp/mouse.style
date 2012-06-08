@@ -1,0 +1,98 @@
+<?xml version="1.0" standalone="yes"?>
+<DASSTYLE>
+  <STYLESHEET version="1.0">
+  <CATEGORY id="default">
+    <TYPE id="default">
+      <GLYPH>
+          <BOX>
+          <LABEL>false</LABEL>
+            <FGCOLOR>blue</FGCOLOR>
+            <FONT>sanserif</FONT>
+            <BGCOLOR>pink</BGCOLOR>
+          </BOX>
+        </GLYPH>
+      </TYPE>
+      <TYPE id="lacZ">
+      <GLYPH>
+          <BOX>
+          <LABEL>false</LABEL>
+            <FGCOLOR>blue</FGCOLOR>
+            <FONT>sanserif</FONT>
+            <BGCOLOR>blue</BGCOLOR>
+          </BOX>
+        </GLYPH>
+      </TYPE>   
+      <TYPE id="bact">
+      <GLYPH>
+          <BOX>
+          <LABEL>false</LABEL>
+            <FGCOLOR>green</FGCOLOR>
+            <FONT>sanserif</FONT>
+            <BGCOLOR>green</BGCOLOR>
+          </BOX>
+        </GLYPH>
+      </TYPE>         
+      <TYPE id="FRT">
+      <GLYPH>
+          <TRIANGLE>
+            <DIRECTION>S</DIRECTION>
+            <FGCOLOR>green</FGCOLOR>
+          </TRIANGLE>
+        </GLYPH>
+      </TYPE>
+    <TYPE id="LoxP">
+      <GLYPH>
+          <TRIANGLE>
+            <DIRECTION>FORWARD</DIRECTION>
+            <FGCOLOR>red</FGCOLOR>
+          </TRIANGLE>
+        </GLYPH>
+      </TYPE>
+    <TYPE id="Homology Arm start">
+      <GLYPH>
+          <BOX>
+            <FGCOLOR>orange</FGCOLOR>
+            <FONT>sanserif</FONT>
+          </BOX>
+        </GLYPH>
+      </TYPE>
+    <TYPE id="Homology Arm end">
+      <GLYPH>
+          <BOX>
+            <FGCOLOR>orange</FGCOLOR>
+            <FONT>sanserif</FONT>
+          </BOX>
+        </GLYPH>
+      </TYPE>
+
+    <TYPE id="Deletion">
+      <GLYPH>
+        <LINE>
+          <STYLE>solid</STYLE>
+        </LINE>
+      </GLYPH>
+    </TYPE>
+    <TYPE id="Conditional (frameshift)">
+      <GLYPH>
+        <LINE>
+          <STYLE>solid</STYLE>
+        </LINE>
+      </GLYPH>
+    </TYPE>
+    <TYPE id="Conditional(Frameshift)">
+      <GLYPH>
+        <LINE>
+          <STYLE>solid</STYLE>
+        </LINE>
+      </GLYPH>
+    </TYPE>
+    <TYPE id="Deletion(Frameshift)">
+      <GLYPH>
+        <LINE>
+          <STYLE>solid</STYLE>
+        </LINE>
+      </GLYPH>
+    </TYPE>
+</CATEGORY>
+  </STYLESHEET>
+</DASSTYLE>

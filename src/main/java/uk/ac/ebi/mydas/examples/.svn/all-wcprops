@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples
+END
+EnsemblTestManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/687/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/EnsemblTestManager.java
+END
+GenotypeDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GenotypeDataSource.java
+END
+GFFFileReferenceDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GFFFileReferenceDataSource.java
+END
+SeparatedByPipesParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/SeparatedByPipesParser.java
+END
+GFF2Parser.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GFF2Parser.java
+END
+GenotypeFileDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GenotypeFileDataSource.java
+END
+GFFFileDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GFFFileDataSource.java
+END
+GenotypeManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GenotypeManager.java
+END
+GenotypeFileParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/GenotypeFileParser.java
+END
+FastaParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/687/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/FastaParser.java
+END
+EnsemblTestDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/EnsemblTestDataSource.java
+END
+SeparatedByPipesDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1061/trunk/mydas/MyDasTemplate/src/main/java/uk/ac/ebi/mydas/examples/SeparatedByPipesDataSource.java
+END

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2007 Philip Jones, EMBL-European Bioinformatics Institute
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~
+  ~ For further details of the mydas project, including source code,
+  ~ downloads and documentation, please see:
+  ~
+  ~ http://code.google.com/p/mydas/
+  ~
+  -->
+
+<mydasserver xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="http://mydas.googlecode.com/svn/trunk/mydas/server_core/src/main/resources/mydasserverconfig.xsd">
+    <!-- The global element holds details of configuration common to the entire server. -->
+    <global>
+        
+        <!-- The URL of the DAS server up to and including /das/ (e.g. http://www.ebi.ac.uk/das-srv/uniprot/das/)
+        This should be the external URL.  (Allows correct access to the service through reverse-proxies etc.)-->
+        <baseurl>http://localhost:8080/das/</baseurl>
+        
+        <!-- A boolean switch indicating if the output from the DAS server should be compressed or not.
+
+         Note that compression does not work with jetty, hence this is set to false here, but you are
+         advised to set this to true for deploying your DAS source on a full featured web server. -->
+        <gzipped>false</gzipped>
+
+        <!-- If set to true, then if the browser points to /das or /das/ then
+            the output of the sources command should be displayed.  This is
+            useful for creating a home page based upon the data source
+            details.-->
+        <slash-das-points-to-dsn>true</slash-das-points-to-dsn>
+        
+        <!-- The name of the default DAS stylesheet to be used for all of the defined datasources.
+        This can be overridden for individual datasources by including a stylesheet element for them. -->
+        <default-stylesheet>TEST.style</default-stylesheet>
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+            to present the dsn command response in a human-readable format.
+            Optional - the processing instruction will only be included if this
+            element is present.
+            README: Please change images, styles and scripts paths in dsn.html and sortable.js -->
+        <!--dsn-xslt-url>/xslt/dsn.xsl</dsn-xslt-url-->
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+            to present the sources command response in a human-readable format.
+            Optional - the processing instruction will only be included if this
+            element is present.
+            Note: The XSL provided can display more than one coordinate system however
+            it does not look "nice" yet. 
+            It takes test-ranges as default values for sequence and features commands and
+            1-100 as default rows for entry_points command.
+            README: Please change images, styles and scripts paths in dsn.html and sortable.js -->
+        <!--sources-xslt-url>/xslt/sources.xsl</sources-xslt-url-->
+
+        <!-- NOTE - THE XSLTs LISTED BELOW (COMMENTED OUT) ARE UNDER DEVELOPMENT, SO NOT
+        CURRENTLY AVAILABLE.  You can of course substitute your own XSLT and provide a link
+        to it here. -->
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+            to present the dna command response in a human-readable format.
+            Optional - the processing instruction will only be included if this
+            element is present. -->
+        <!--<dna-xslt-url>/xslt/dna.xsl</dna-xslt-url>-->
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+            to present the entry-points command response in a human-readable format.
+            Optional - the processing instruction will only be included if this
+            element is present.-->
+        <!--<entry-points-xslt-url>/xslt/entry-point.xsl</entry-points-xslt-url>-->
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+          to present the sequence command response in a human-readable format.
+          Optional - the processing instruction will only be included if this
+          element is present. -->
+        <!--<sequence-xslt-url>/xslt/sequence.xsl</sequence-xslt-url>-->
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+            to present the features command response in a human-readable format.
+            Optional - the processing instruction will only be included if this
+            element is present. -->
+        <!--<features-xslt-url>/xslt/features.xsl</features-xslt-url>-->
+
+        <!-- Gives the URI of an XSLT transformation that can be used by the browser
+            to present the types command response in a human-readable format.
+            Optional - the processing instruction will only be included if this
+            element is present. -->
+        <!--<types-xslt-url>/xslt/types.xsl</types-xslt-url>-->
+
+        <!-- These global properties are made available to all the plugin classes
+        through the DataSource interface, so the plugin author can
+        add arbitrary additional configuration to their data source. -->
+    </global>
+    <!-- The enclosing element for one or more datasource definitions. -->
+    <datasources>
+        <!-- Configuration for a single data source. All the information annotated in this
+        element will be available to the DataSource class.
+        Attributes:
+        uri: The uri (required) attribute uniquely identifies the group of sources, and must be globally unique, as provided in the /DASDSN/DSN/SOURCE element of the XML returned by the DAS source command.
+        title: The title (required) attribute is a short text label suitable for display.
+        description: description (required) attribute is a longer text description.
+        doc_href: The doc_href (optional) attribute is a URL location where more information about the data is available.
+        mapmaster: The mapmaster attribute is a URL location pointing to the 'reference source' for the coordinate system.
+        max_entry_points: The max_entry_points (optional) attribute is a integer defining the maximum number of entry points
+                          that a data source commits to retrieve when entry_points command is used
+        -->
+        
+<!--          <datasource uri="mouseb" -->
+<!--                     title="locahost biomart" -->
+<!--                     description="mouse das source powered based on the older proserver sanger http://das.sanger.ac.uk/das/ikmc_products/ data source" -->
+<!--                     doc_href="http://www.i-dcc.org/targ_rep/" -->
+<!--                     mapmaster="http://www.ensembl.org/das/Mus_musculus.NCBIM37.reference/"> -->
+<!-- 			<maintainer email="jwarren@ebi.ac.uk" /> -->
+
+<!-- 			<version uri="mouseb" created="2012-05-22"> -->
+<!-- 	            <class>uk.ac.ebi.mydas.examples.IkmcAllelesDataSource</class> -->
+				
+<!-- <coordinates uri="http://www.dasregistry.org/dasregistry/coordsys/CS_DS108" taxid="10090" source="Chromosome" authority="NCBIM" test_range="" version="37">NCBIM_37,Chromosome,Mus musculus</coordinates> -->
+
+<!-- 				<capability type="das1:sources"		 	query_uri="http://localhost:8080/das/mouseb" /> -->
+<!-- 				<capability type="das1:types"			query_uri="http://localhost:8080/das/mouseb/types" /> -->
+<!-- 				<capability type="das1:features"		query_uri="http://localhost:8080/das/mouseb/features" /> -->
+<!-- 				<capability type="das1:stylesheet"		query_uri="http://localhost:8080/das/mouseb/stylesheet" />			 -->
+ <!-- 				<property key="solrUrl" value="http://web-das-dev01.internal.sanger.ac.uk:8080/solr" visibility="true"/> --> 
+<!-- 				<property key="biomartServiceUrl" value="http://www.i-dcc.org/biomart/martservice" visibility="true"/> -->
+ <!-- 			<property key="solrUrl" value="http://localhost:8983/solr" visibility="true"/> --> 
+<!-- 			</version> -->
+<!-- 			<stylesheet>mouse.style</stylesheet> -->
+<!--             <dna-command-enabled>false</dna-command-enabled> -->
+<!--             <use-feature-id-for-feature-label>false</use-feature-id-for-feature-label> -->
+<!--             <include-types-with-zero-count>true</include-types-with-zero-count> -->
+<!--         </datasource> -->
+        
+        
+        
+                	  <datasource uri="ikmcalleles"
+                    title="ikmc alleles"
+                    description="ikmc alleles"
+                    doc_href="http://www.i-dcc.org/targ_rep/"
+                    mapmaster="http://www.ensembl.org/das/Mus_musculus.NCBIM37.reference/">
+			<maintainer email="jwarren@ebi.ac.uk" />
+
+			<version uri="ikmcalleles" created="2012-06-07">
+	            <class>uk.ac.ebi.mydas.examples.MouseSolrDataSource</class>
+				
+<coordinates uri="http://www.dasregistry.org/dasregistry/coordsys/CS_DS108" taxid="10090" source="Chromosome" authority="NCBIM" test_range="" version="37">NCBIM_37,Chromosome,Mus musculus</coordinates>
+
+				<capability type="das1:sources"		 	query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles" />
+<!-- 				<capability type="das1:types"			query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles/types" /> -->
+				<capability type="das1:features"		query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles/features" />			
+<!--  				<property key="solrUrl" value="http://localhost:8983/solr" visibility="true"/> -->
+ 				<property key="solrUrl" value="http://ves-ebi-d0.ebi.ac.uk:8090/mi/solr/dasikmcalleles/" visibility="false"/>
+<!-- 				<property key="solrUrl" value="http://ikmc.vm.bytemark.co.uk:8989/solr" visibility="true"/> -->
+			</version>
+			<stylesheet>mouse.style</stylesheet>
+            <dna-command-enabled>false</dna-command-enabled>
+            <use-feature-id-for-feature-label>true</use-feature-id-for-feature-label>
+            <include-types-with-zero-count>true</include-types-with-zero-count>
+        </datasource>
+    </datasources>
+</mydasserver>
+
