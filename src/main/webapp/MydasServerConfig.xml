@@ -105,47 +105,7 @@
     </global>
     <!-- The enclosing element for one or more datasource definitions. -->
     <datasources>
-        <!-- Configuration for a single data source. All the information annotated in this
-        element will be available to the DataSource class.
-        Attributes:
-        uri: The uri (required) attribute uniquely identifies the group of sources, and must be globally unique, as provided in the /DASDSN/DSN/SOURCE element of the XML returned by the DAS source command.
-        title: The title (required) attribute is a short text label suitable for display.
-        description: description (required) attribute is a longer text description.
-        doc_href: The doc_href (optional) attribute is a URL location where more information about the data is available.
-        mapmaster: The mapmaster attribute is a URL location pointing to the 'reference source' for the coordinate system.
-        max_entry_points: The max_entry_points (optional) attribute is a integer defining the maximum number of entry points
-                          that a data source commits to retrieve when entry_points command is used
-        -->
-        
-<!--          <datasource uri="mouseb" -->
-<!--                     title="locahost biomart" -->
-<!--                     description="mouse das source powered based on the older proserver sanger http://das.sanger.ac.uk/das/ikmc_products/ data source" -->
-<!--                     doc_href="http://www.i-dcc.org/targ_rep/" -->
-<!--                     mapmaster="http://www.ensembl.org/das/Mus_musculus.NCBIM37.reference/"> -->
-<!-- 			<maintainer email="jwarren@ebi.ac.uk" /> -->
-
-<!-- 			<version uri="mouseb" created="2012-05-22"> -->
-<!-- 	            <class>uk.ac.ebi.mydas.examples.IkmcAllelesDataSource</class> -->
-				
-<!-- <coordinates uri="http://www.dasregistry.org/dasregistry/coordsys/CS_DS108" taxid="10090" source="Chromosome" authority="NCBIM" test_range="" version="37">NCBIM_37,Chromosome,Mus musculus</coordinates> -->
-
-<!-- 				<capability type="das1:sources"		 	query_uri="http://localhost:8080/das/mouseb" /> -->
-<!-- 				<capability type="das1:types"			query_uri="http://localhost:8080/das/mouseb/types" /> -->
-<!-- 				<capability type="das1:features"		query_uri="http://localhost:8080/das/mouseb/features" /> -->
-<!-- 				<capability type="das1:stylesheet"		query_uri="http://localhost:8080/das/mouseb/stylesheet" />			 -->
- <!-- 				<property key="solrUrl" value="http://web-das-dev01.internal.sanger.ac.uk:8080/solr" visibility="true"/> --> 
-<!-- 				<property key="biomartServiceUrl" value="http://www.i-dcc.org/biomart/martservice" visibility="true"/> -->
- <!-- 			<property key="solrUrl" value="http://localhost:8983/solr" visibility="true"/> --> 
-<!-- 			</version> -->
-<!-- 			<stylesheet>mouse.style</stylesheet> -->
-<!--             <dna-command-enabled>false</dna-command-enabled> -->
-<!--             <use-feature-id-for-feature-label>false</use-feature-id-for-feature-label> -->
-<!--             <include-types-with-zero-count>true</include-types-with-zero-count> -->
-<!--         </datasource> -->
-        
-        
-        
-                	  <datasource uri="ikmcalleles"
+       	  <datasource uri="ikmcalleles"
                     title="ikmc alleles"
                     description="ikmc alleles"
                     doc_href="http://www.i-dcc.org/targ_rep/"
@@ -155,13 +115,37 @@
 			<version uri="ikmcalleles" created="2012-06-07">
 	            <class>uk.ac.ebi.mydas.examples.MouseSolrDataSource</class>
 				
-<coordinates uri="http://www.dasregistry.org/dasregistry/coordsys/CS_DS108" taxid="10090" source="Chromosome" authority="NCBIM" test_range="" version="37">NCBIM_37,Chromosome,Mus musculus</coordinates>
+<coordinates uri="http://www.dasregistry.org/dasregistry/coordsys/CS_DS108" taxid="10090" source="Chromosome" authority="NCBIM" test_range="1:20000000,21001000" version="37">NCBIM_37,Chromosome,Mus musculus</coordinates>
 
-				<capability type="das1:sources"		 	query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles" />
+				<capability type="das1:sources"		 	query_uri="http://wwwdev.ebi.ac.uk/mi/ws/das-ws/das/ikmcalleles" />
 <!-- 				<capability type="das1:types"			query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles/types" /> -->
-				<capability type="das1:features"		query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles/features" />			
+				<capability type="das1:features"		query_uri="http://wwwdev.ebi.ac.uk/mi/ws/das-ws/das/ikmcalleles/features" />			
 <!--  				<property key="solrUrl" value="http://localhost:8983/solr" visibility="true"/> -->
- 				<property key="solrUrl" value="http://ves-ebi-d0.ebi.ac.uk:8090/mi/solr/dasikmcalleles/" visibility="false"/>
+ 				<property key="solrUrl" value="http://wwwdev.ebi.ac.uk/mi/solr/dasikmcalleles/" visibility="false"/>
+<!-- 				<property key="solrUrl" value="http://ikmc.vm.bytemark.co.uk:8989/solr" visibility="true"/> -->
+			</version>
+			<stylesheet>mouse.style</stylesheet>
+            <dna-command-enabled>false</dna-command-enabled>
+            <use-feature-id-for-feature-label>true</use-feature-id-for-feature-label>
+            <include-types-with-zero-count>true</include-types-with-zero-count>
+        </datasource>
+        
+          <datasource uri="ikmcallelesm38"
+                    title="ikmc alleles for m38"
+                    description="ikmc alleles for mouse GRCm 38"
+                    doc_href="http://www.i-dcc.org/targ_rep/"
+                    mapmaster="http://www.ensembl.org/das/Mus_musculus.NCBIM37.reference/">
+			<maintainer email="jwarren@ebi.ac.uk" />
+
+			<version uri="ikmcallelesm38" created="2012-06-07">
+	            <class>uk.ac.ebi.mydas.examples.MouseSolrDataSource</class>
+				
+<coordinates uri="http://www.dasregistry.org/dasregistry/coordsys/CS_DS680" source="Chromosome" authority="GRCm" taxid="10090" version="38" test_range="1:20000000,21001000">GRCm_38,Chromosome,Mus musculus</coordinates>
+				<capability type="das1:sources"		 	query_uri="http://wwwdev.ebi.ac.uk/mi/ws/das-ws/das/ikmcallelesm38" />
+<!-- 				<capability type="das1:types"			query_uri="http://wwwdev.ebi.ac.uk/mi/PhenotypeArchive/ws/das/ikmcalleles/types" /> -->
+				<capability type="das1:features"		query_uri="http://wwwdev.ebi.ac.uk/mi/ws/das-ws/das/ikmcallelesm38/features" />			
+<!--  				<property key="solrUrl" value="http://localhost:8983/solr" visibility="true"/> -->
+ 				<property key="solrUrl" value="http://wwwdev.ebi.ac.uk/mi/solr/dasikmcallelesm38/" visibility="false"/>
 <!-- 				<property key="solrUrl" value="http://ikmc.vm.bytemark.co.uk:8989/solr" visibility="true"/> -->
 			</version>
 			<stylesheet>mouse.style</stylesheet>
